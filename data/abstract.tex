@@ -1,0 +1,28 @@
+\setlength{\headheight}{13pt}
+\cabstract{
+随着深度学习在视觉任务中的广泛应用，如何有效提取具有判别性和鲁棒性的特征表示，成为计算机视觉领域亟待解决的核心问题。传统字典学习方法虽具备可解释性和稀疏性优势，但在面对复杂场景下的高维图像数据时，往往难以充分利用样本间的全局语义关系，且对噪声干扰较为敏感。为此，本文提出一种基于频率的对比增强深度字典学习框架(Contrastive Deep Dictionary Learning with Frequency Augmentation, FA-CDDL)，通过引入多层监督对比学习与频率域增强机制，系统提升深度字典学习模型的特征判别能力和特征表示性能。本文的主要研究内容及创新如下：
+
+1.针对传统深度字典学习(Deep Dictionary Learning, DDL)在特征学习中缺乏全局判别性约束的问题，本文提出一种多层监督对比学习机制。该机制不同于传统无监督对比学习，而是在每一层编码空间中引入基于标签信息的对比损失，动态构建正负样本对，强化同类样本特征的一致性与类间样本特征的分离性，有效减少特征冗余，提升模型判别能力。实验表明，该方法在多类图像分类任务中优于依赖局部语义约束的传统方法。
+
+2.为进一步提高模型对关键特征的提取能力，增强表征性能及模型对复杂场景中频率扰动与噪声干扰的鲁棒性，本文还提出一种基于快速傅里叶变换的频率增强机制。具体来说，该机制对编码特征进行振幅谱分解，通过保留其中高能量频率成分并进行相位一致性重建，构建更具判别性的增强正样本用于对比学习。该方法不仅扩充了对比的正样本，还在抑制低频噪声的同时，保留了图像中的关键细节信息，显著提升了模型在噪声环境下的稳定性与泛化能力。最后本节结合重构损失与频域增强后的对比损失，进行表征字典的联合优化，实验表明，该方法在多类图像分类任务中优于上述仅结合普通对比学习的深度字典学习方法。
+
+基于上述理论模型，本文设计并实现了一套图像分类原型系统。系统包括用户管理、图像上传与分类结果可视化等核心功能模块，支持多种图像分类任务的快速部署与测试。通过在实际场景中的应用验证，系统运行稳定，分类准确率高，充分验证了本文框架在实际应用中的可行性与有效性，展示了良好的工程化推广前景。
+}%中文摘要内容
+\ckeywords{
+深度字典学习，监督对比学习，频域增强，特征表示，图像分类
+}%中文摘要关键词
+
+\eabstract{
+With the widespread adoption of deep learning in visual tasks, extracting discriminative and robust feature representations has become a pivotal challenge in computer vision. Traditional dictionary-learning methods offer appealing interpretability and sparsity, yet they struggle to exploit global semantic relationships among samples and are sensitive to noise when coping with high-dimensional images captured in complex scenes. To address these limitations, we propose a Contrastive Deep Dictionary Learning with Frequency Augmentation (FA-CDDL) framework that integrates layer-wise supervised contrastive learning with frequency-domain augmentation to systematically enhance the discriminability and representation quality of deep dictionary models. The main contributions and innovations of this thesis are summarized as follows:
+
+Layer-wise Supervised Contrastive Learning. To overcome the lack of global discriminative constraints in conventional deep dictionary learning, we introduce a novel supervised contrastive mechanism. Unlike prevailing unsupervised contrastive approaches, the proposed module leverages label information to dynamically form positive and negative pairs at every encoding layer, enforcing intra-class compactness and inter-class separability. This strategy effectively reduces feature redundancy and boosts discriminative power. Extensive experiments on multi-class image classification benchmarks demonstrate consistent superiority over traditional methods that rely solely on local semantic regularization.
+
+To further enhance the model’s capacity for extracting key features, strengthen its representation performance, and boost robustness against frequency perturbations and noise in complex scenes, we introduce a frequency-enhancement mechanism based on the Fast Fourier Transform (FFT). Specifically, the mechanism decomposes the encoded features into amplitude spectra, retains the high-energy frequency components, and reconstructs the signal while preserving phase consistency. This yields more discriminative, augmented positive samples for contrastive learning. The approach not only enlarges the pool of positive samples for contrast, but also suppresses low-frequency noise while preserving critical image details, markedly improving the model’s stability and generalization under noisy conditions. Finally, we jointly optimize the representation dictionary by combining the reconstruction loss with the contrastive loss regularized by the frequency-domain enhancement. Extensive experiments demonstrate that the proposed method outperforms the aforementioned deep-dictionary approaches that merely incorporate vanilla contrastive learning on a variety of image classification tasks.
+
+Prototype System Design and Deployment. Building upon the theoretical framework, we design and implement an image-classification prototype system encompassing user management, image upload, and result visualization modules. The platform supports rapid deployment and testing across diverse classification tasks. Field evaluations verify stable operation and high accuracy, confirming the practicality and effectiveness of the proposed FA-CDDL framework and highlighting its promising potential for real-world engineering applications.
+}%英文摘要内容
+\ekeywords{
+   Deep dictionary learning, supervised contrastive learning, frequency augmentation, feature representation, image classification
+}%英文摘要关键词
+
+\makeabstract{} %摘要页面格式勿动

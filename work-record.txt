@@ -1,0 +1,4 @@
+26/2/24 word改用latex，完成前两章编译。  
+    1.cover.tex完成（时间等待修改）。
+    2.abstract.tex完成。
+    3.
